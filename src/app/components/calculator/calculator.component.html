@@ -1,0 +1,25 @@
+<div class="container">
+    <h2 class="my-5 text-center">My awesome calculator</h2>
+    <div class="d-flex justify-content-between">
+        <div class="w-100 me-2">
+            <label class="form-label">Number 1 </label>
+            <input type="text" [(ngModel)]="number1" class="form-control">
+        </div>
+        <div class="w-100">
+            <label class="form-label">Number 2 </label>
+            <input type="text" [(ngModel)]="number2" class="form-control">
+        </div>
+    </div>
+    <div class="my-2 d-flex flex-row">
+        <button class="btn btn-primary w-100" (click)="add()"><i class="fas fa-plus"></i></button>
+        <button class="btn btn-primary mx-3 w-100" (click)="minus()"><i class="fas fa-minus"></i></button>
+        <button class="btn btn-primary me-3 w-100" (click)="multiply()"><i class="fas fa-times"></i></button>
+        <button class="btn btn-primary w-100" (click)="divide()"><i class="fas fa-divide"></i></button>
+    </div>
+    <h3 class="my-2">Result: {{result}}</h3>
+    <hr>
+    <ul class="list-group">
+        <p>History</p>
+        <li *ngFor="let item of history" class="list-group-item">{{item}}</li>
+    </ul>
+</div>
